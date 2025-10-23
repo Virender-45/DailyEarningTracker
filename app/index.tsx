@@ -1,15 +1,5 @@
-import { Text, View } from "react-native";
+// app/index.tsx
+import { registerRootComponent } from 'expo';
+import HomeScreen from './screens/homeScreen';
 
-export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Daily Earning Tracker</Text>
-    </View>
-  );
-}
+registerRootComponent(HomeScreen)
