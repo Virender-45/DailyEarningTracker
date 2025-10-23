@@ -1,50 +1,81 @@
-# Welcome to your Expo app 👋
+# 💰 Daily Earning Tracker
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native (Expo + TypeScript) app that allows users to **track their daily earnings**, **filter them by date**, and view a **summary of total entries and total earnings**.  
 
-## Get started
+---
 
-1. Install dependencies
+## 👥 Team & Responsibilities
 
-   ```bash
-   npm install
-   ```
+| Team Member | Responsibilities |
+|--------------|------------------|
+| **Virender Singh** | Set up the project folder and README. Created `DateFilter` to filter earnings by date and `DataSummaryBar` to show total entries and earnings. |
+| **Lavi Choudhary** | Built `DailyEarningsInput` to capture daily earnings and `EarningsList` to display them dynamically. |
+| **Shivam Sharma** | Created `ShowTotalButton` to calculate and display total earnings using functions and state. |
+| **Tushar** | Built `Layout` to arrange all components (input, list, total, summary) neatly using Flexbox for clear presentation. |
+| **Ashish** | Handled `AppStyling` to apply consistent colors, fonts, and spacing across components, making the UI readable and visually appealing. |
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 📱 Features
 
-In the output, you'll find options to open the app in a
+- 📆 **Date Filter** — Filter your earnings between specific start and end dates.  
+- 💵 **Summary Bar** — Displays total entries and total earnings dynamically.  
+- 🧾 **Earnings Input & List** — Add and view your daily earning records.  
+- ⚙️ **Modular Components** — Clean, reusable, and well-structured codebase.  
+- 🎨 **Consistent Styling** — Unified colors, fonts, and spacing for a neat UI.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🧩 Tech Stack
 
-## Get a fresh project
+- **Framework:** [React Native](https://reactnative.dev/)  
+- **Platform:** [Expo](https://expo.dev/)  
+- **Language:** TypeScript  
+- **Date Picker:** `@react-native-community/datetimepicker`
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## 📁 Project Structure So Far
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+DailyEarningTracker/
+│
+├─ app/
+│ ├─ components/
+│ │ ├─ DateFilter.tsx # Date range selector
+│ │ ├─ DataSummaryBar.tsx # Shows total entries & total earnings
+│ │
+│ ├─ screens/
+│ │ └─ HomeScreen.tsx # Main screen combining all features
+│ │
+│ ├─ data/
+│ │ └─ earnings.ts # Sample earnings data
+│ │
+│ ├─ _layout.tsx
+│ └─ index.tsx # Entry point
+│
+├─ assets/ # App images & media
+├─ package.json
+├─ app.json
+├─ tsconfig.json
+├─ README.md
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-## Join the community
+🧠 How It Works
 
-Join our community of developers creating universal apps.
+1. The user selects a start and end date using the DateFilter component.
+2. HomeScreen filters the earnings data based on the selected range.
+3. The DataSummaryBar updates to show total entries and total earnings.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+🧑‍🎨 Authors
+
+Developed by the Daily Earning Tracker Team:
+
+- Virender Singh
+- Lavi Choudhary
+- Shivam Sharma
+- Tushar
+- Ashish
+
