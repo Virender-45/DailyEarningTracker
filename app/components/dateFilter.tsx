@@ -2,8 +2,8 @@
 
 // app/components/DateFilter.tsx
 import React, { useState } from "react";
-import { Button, StyleSheet, TextInput, View } from "react-native";
-
+import { Button, TextInput, View,Pressable } from "react-native";
+import { globalStyles } from "../styles/globalstyles";
 interface DateFilterProps {
   onFilter: (startDate: string, endDate: string) => void;
 }
@@ -17,27 +17,28 @@ const DateFilter: React.FC<DateFilterProps> = ({ onFilter }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={globalStyles.dateFilterContainer}>
       <TextInput
         placeholder="Start Date (YYYY-MM-DD)"
         value={startDate}
         onChangeText={setStartDate}
-        style={styles.input}
+        style={globalStyles.dateInput}
       />
       <TextInput
         placeholder="End Date (YYYY-MM-DD)"
         value={endDate}
         onChangeText={setEndDate}
-        style={styles.input}
+        style={globalStyles.dateInput}
       />
       <Button title="Filter" onPress={handleFilter} />
+        
     </View>
   );
 };
 
 export default DateFilter;
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   container: { marginVertical: 10 },
   input: {
     borderWidth: 1,
@@ -46,4 +47,4 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 6,
   },
-});
+});*/

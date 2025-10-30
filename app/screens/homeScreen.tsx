@@ -2,9 +2,11 @@
 
 // app/screens/HomeScreen.tsx
 import React, { useState } from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
 import DataSummaryBar from "../components/dataSummaryBar";
 import DateFilter from "../components/dateFilter";
+import { globalStyles } from "../styles/globalstyles";
+import { SafeAreaView } from "react-native";
 
 interface Earning {
   date: string;   // e.g. "2025-10-20"
@@ -39,7 +41,8 @@ const HomeScreen: React.FC = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <view style={globalStyles.container}>
+      <Text style={globalStyles.title}>💰 Earnings Tracker</Text>
       <DateFilter onFilter={handleFilter} />
       <DataSummaryBar earnings={filteredEarnings} />
 
@@ -47,18 +50,18 @@ const HomeScreen: React.FC = () => {
         data={filteredEarnings}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <Text style={styles.item}>
+          <Text style={globalStyles.listItem}>
             {item.date} - ₹{item.amount}
           </Text>
         )}
       />
-    </View>
+    </view>
   );
 };
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: "#fff" },
   item: {
     fontSize: 16,
@@ -66,4 +69,4 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "#ccc",
   },
-});
+});*/
