@@ -7,15 +7,21 @@ import DataSummaryBar from "../components/dataSummaryBar";
 import DateFilter from "../components/dateFilter";
 
 interface Earning {
-  date: string;   // e.g. "2025-10-20"
+  date: string;
   amount: number;
 }
 
 const HomeScreen: React.FC = () => {
   const [earnings, setEarnings] = useState<Earning[]>([
-    { date: "2025-10-20", amount: 200 },
-    { date: "2025-10-21", amount: 150 },
-    { date: "2025-10-23", amount: 300 },
+    { date: "2025-01-20", amount: 200 },
+    { date: "2025-04-21", amount: 150 },
+    { date: "2024-11-23", amount: 300 },
+    { date: "2024-06-23", amount: 300 },
+    { date: "2024-03-23", amount: 300 },
+    { date: "2024-02-23", amount: 300 },
+    { date: "2023-12-23", amount: 300 },
+    { date: "2023-05-23", amount: 300 },
+    { date: "2023-07-23", amount: 300 }
   ]);
 
   const [filteredEarnings, setFilteredEarnings] = useState<Earning[]>(earnings);
